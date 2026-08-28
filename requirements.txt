@@ -1,0 +1,6 @@
+# Dependências necessárias para executar o treino (`python main.py`).
+torch>=2.0
+numpy>=1.24
+PyYAML>=6.0
+psutil>=5.9
+regex>=2023.0.0

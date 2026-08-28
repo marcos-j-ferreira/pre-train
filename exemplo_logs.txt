@@ -1,0 +1,36 @@
+
+Configura��es carregadas
+vocab size: 10001
+Dispositivo: cuda
+Total de par�metros do modelo: 1,694,464 | type torch.float32
+lr_min: 1e-05 | max: 0.001
+Iniciando treinamento por 1,500 steps...
+Batch size: 12 | Grad accum: 20 | Batch efetivo: 240 | AMP: False, Device: cuda
+Step  0 | Loss: 9.2392 | LR: 0.0001000000 | Tempo: 0.0min | Norm: 1.6037 | tokens: 38,400 | tokens/sec 33,421 | dt: 1149.0ms | RAM: 0.71GB (72%) | GPU: 94% | VRAM: 0.12/4.3GB
+Step 0 | Loss de valida��o: 9.1963
+
+Step  1 | Loss: 9.2004 | LR: 0.0002000000 | Tempo: 0.0min | Norm: 1.6964 | tokens: 76,800 | tokens/sec 40,055 | dt: 958.7ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step  2 | Loss: 9.1456 | LR: 0.0003000000 | Tempo: 0.1min | Norm: 1.6669 | tokens: 115,200 | tokens/sec 40,709 | dt: 943.3ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step  3 | Loss: 9.0670 | LR: 0.0004000000 | Tempo: 0.1min | Norm: 1.9958 | tokens: 153,600 | tokens/sec 40,284 | dt: 953.2ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step  4 | Loss: 8.9039 | LR: 0.0005000000 | Tempo: 0.1min | Norm: 1.7099 | tokens: 192,000 | tokens/sec 40,169 | dt: 956.0ms | RAM: 0.73GB (71%) | GPU: 95% | VRAM: 0.12/4.3GB
+Step  5 | Loss: 8.8295 | LR: 0.0006000000 | Tempo: 0.1min | Norm: 1.5959 | tokens: 230,400 | tokens/sec 41,002 | dt: 936.5ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step  6 | Loss: 8.7779 | LR: 0.0007000000 | Tempo: 0.1min | Norm: 1.4021 | tokens: 268,800 | tokens/sec 41,009 | dt: 936.4ms | RAM: 0.73GB (71%) | GPU: 89% | VRAM: 0.12/4.3GB
+Step  7 | Loss: 8.7299 | LR: 0.0008000000 | Tempo: 0.1min | Norm: 1.3839 | tokens: 307,200 | tokens/sec 41,022 | dt: 936.1ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step  8 | Loss: 8.6098 | LR: 0.0009000000 | Tempo: 0.2min | Norm: 1.4366 | tokens: 345,600 | tokens/sec 40,734 | dt: 942.7ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step  9 | Loss: 8.4570 | LR: 0.0010000000 | Tempo: 0.2min | Norm: 1.4741 | tokens: 384,000 | tokens/sec 40,974 | dt: 937.2ms | RAM: 0.73GB (71%) | GPU: 96% | VRAM: 0.12/4.3GB
+Step 10 | Loss: 8.3185 | LR: 0.0010000000 | Tempo: 0.2min | Norm: 1.4849 | tokens: 422,400 | tokens/sec 40,712 | dt: 943.2ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 11 | Loss: 8.1447 | LR: 0.0009999989 | Tempo: 0.2min | Norm: 1.5869 | tokens: 460,800 | tokens/sec 40,942 | dt: 937.9ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 12 | Loss: 8.0260 | LR: 0.0009999956 | Tempo: 0.2min | Norm: 1.4726 | tokens: 499,200 | tokens/sec 41,213 | dt: 931.8ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 13 | Loss: 7.8834 | LR: 0.0009999901 | Tempo: 0.2min | Norm: 1.8576 | tokens: 537,600 | tokens/sec 40,618 | dt: 945.4ms | RAM: 0.73GB (71%) | GPU: 93% | VRAM: 0.12/4.3GB
+Step 14 | Loss: 7.7774 | LR: 0.0009999824 | Tempo: 0.3min | Norm: 1.6644 | tokens: 576,000 | tokens/sec 40,734 | dt: 942.7ms | RAM: 0.73GB (71%) | GPU: 96% | VRAM: 0.12/4.3GB
+Step 15 | Loss: 7.6678 | LR: 0.0009999725 | Tempo: 0.3min | Norm: 1.6322 | tokens: 614,400 | tokens/sec 39,286 | dt: 977.4ms | RAM: 0.73GB (71%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 16 | Loss: 7.4974 | LR: 0.0009999604 | Tempo: 0.3min | Norm: 1.5423 | tokens: 652,800 | tokens/sec 40,999 | dt: 936.6ms | RAM: 0.73GB (71%) | GPU: 96% | VRAM: 0.12/4.3GB
+Step 17 | Loss: 7.3170 | LR: 0.0009999461 | Tempo: 0.3min | Norm: 1.5012 | tokens: 691,200 | tokens/sec 40,374 | dt: 951.1ms | RAM: 0.73GB (70%) | GPU: 98% | VRAM: 0.12/4.3GB
+Step 18 | Loss: 7.3298 | LR: 0.0009999296 | Tempo: 0.3min | Norm: 1.3862 | tokens: 729,600 | tokens/sec 40,348 | dt: 951.7ms | RAM: 0.73GB (69%) | GPU: 90% | VRAM: 0.12/4.3GB
+Step 19 | Loss: 7.0578 | LR: 0.0009999109 | Tempo: 0.3min | Norm: 1.5758 | tokens: 768,000 | tokens/sec 40,601 | dt: 945.8ms | RAM: 0.73GB (69%) | GPU: 96% | VRAM: 0.12/4.3GB
+Step 20 | Loss: 6.9919 | LR: 0.0009998900 | Tempo: 0.3min | Norm: 1.4123 | tokens: 806,400 | tokens/sec 40,175 | dt: 955.8ms | RAM: 0.73GB (69%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 21 | Loss: 6.9292 | LR: 0.0009998669 | Tempo: 0.4min | Norm: 1.5533 | tokens: 844,800 | tokens/sec 40,353 | dt: 951.6ms | RAM: 0.73GB (69%) | GPU: 98% | VRAM: 0.12/4.3GB
+Step 22 | Loss: 6.7710 | LR: 0.0009998416 | Tempo: 0.4min | Norm: 1.4122 | tokens: 883,200 | tokens/sec 40,179 | dt: 955.7ms | RAM: 0.73GB (70%) | GPU: 96% | VRAM: 0.12/4.3GB
+Step 23 | Loss: 6.6156 | LR: 0.0009998141 | Tempo: 0.4min | Norm: 1.5134 | tokens: 921,600 | tokens/sec 40,365 | dt: 951.3ms | RAM: 0.73GB (70%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 24 | Loss: 6.6259 | LR: 0.0009997844 | Tempo: 0.4min | Norm: 1.4385 | tokens: 960,000 | tokens/sec 40,530 | dt: 947.5ms | RAM: 0.73GB (70%) | GPU: 97% | VRAM: 0.12/4.3GB
+Step 25 | Loss: 6.7085 | LR: 0.0009997525 | Tempo: 0.4min | Norm: 1.1316 | tokens: 998,400 | tokens/sec 40,322 | dt: 952.3ms | RAM: 0.73GB (70%) | GPU: 96% | VRAM: 0.12/4.3GB

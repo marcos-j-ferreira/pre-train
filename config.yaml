@@ -1,6 +1,8 @@
 dataset:
-  shard_dir: "dataset/shards"
-  shard_pattern: "shard_*.bin"
+  # diretorio que está os shards ou o arquivo .bin
+  shard_dir: "dataset"
+  # O arquivo .bin ou os aruivos.
+  shard_pattern: "test_rapido.bin" # ou com varias shards =  "shard_*.bin"
   validation_fraction: 0.05
   seed: 42
 

@@ -155,3 +155,21 @@ No arquivo [`exemplo_log.txt`](./exemplo_log.txt) você encontra um exemplo do q
 
 - [ ] Implementar suporte a paralelismo com múltiplas GPUs (DDP)
 - [ ] Permitir retomar o treinamento a partir de um checkpoint salvo (*resume training*)
+
+
+# PitStop 
+
+Deixei um pequeno dataset já tokenizado no diretório dataset. Ao clonar este projeto, execute o main.py para validar se tudo está correto e funcionando. Depois disso, fique à vontade para fazer as alterações que desejar.
+
+```bash
+# Este treino ainda está configurado para utilizar apenas 1 GPU
+python main.py
+```
+
+## Tokenizador
+
+Como mencionado anteriormente, o tokenizador disponível neste projeto é baseado no dataset:
+
+- [Hugging Face – TinyStories](https://huggingface.co/datasets/roneneldan/TinyStories) — aproximadamente 1 bilhão de tokens
+
+Você poderá treinar o modelo com outros datasets ou utilizar um tokenizador de sua escolha.

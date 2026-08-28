@@ -1,6 +1,6 @@
 # Objetivo e observações
 
-Realizar o pré-treinamento de um modelo de linguagem, usando de forma eficiente o hardware disponível — na manipulação dos dados (com janelas deslizantes aleatórias e carregamento eficiente) e no forward/backward do treino.
+Realizar o pré-treinamento de um modelo de linguagem, usando de forma eficiente o hardware disponível, manipulação dos dados (com janelas deslizantes aleatórias e carregamento eficiente), forward/backward do modelo.
 
 > Treinamento não "coloca conhecimento" diretamente no modelo. Ele modifica os parâmetros para que o modelo represente uma distribuição estatística aprendida a partir dos dados.
 
@@ -38,7 +38,7 @@ Ao observar enormes quantidades de sequências, o modelo começa a construir rep
 
 *Experimentos realizados*
 
-Não adianta, por exemplo, usar o dump da Wikipédia em um modelo pequeno: ele não terá capacidade (número de parâmetros) suficiente para absorver tantos artigos e informações. Da mesma forma, não adianta treinar só com Wikipédia e esperar um modelo com alta capacidade de generalização — o conhecimento enciclopédico é denso em fatos, mas pouco diverso em estilo e estrutura. É necessário um dataset diverso, com conversas, artigos, fóruns, código etc. Assim o modelo aprende conhecimento, sintaxe e língua de forma mais equilibrada.
+Não adianta usar o dump da Wikipédia em um modelo pequeno: ele não terá capacidade (número de parâmetros) suficiente para absorver tantos artigos e informações. Da mesma forma, não adianta treinar só com Wikipédia e esperar um modelo com alta capacidade de generalização — o conhecimento enciclopédico é denso em fatos, mas pouco diverso em estilo e estrutura. É necessário um dataset diverso, com conversas, artigos, fóruns, código etc. Assim o modelo aprende conhecimento, sintaxe e língua de forma mais equilibrada.
 
 Da mesma forma, não adianta usar um modelo muito grande com poucos dados: existe uma relação empírica entre tamanho do modelo e volume de dados — as **Chinchilla scaling laws** (Hoffmann et al., 2022), que propõem algo próximo de **20 tokens de treino por parâmetro** como ponto de treino compute-ótimo (ou seja, o melhor uso do orçamento de computação disponível, não necessariamente o teto de qualidade do modelo).
 
@@ -60,7 +60,7 @@ Um pré-treinamento de modelo se divide em 4 partes principais. Quais são elas 
 
 ### Modelo
 
-Foram desenvolvidas duas arquiteturas, **MoE** e **GPT-2**, ambas baseadas no paper *"Attention Is All You Need"*, usando somente a parte **decoder-only**. É uma arquitetura que permite contextos longos graças ao mecanismo de atenção, empilhando múltiplas camadas de blocos de atenção + feed-forward.
+Foram desenvolvidas duas arquiteturas e suas variações, **MoE** e **GPT-2**, ambas baseadas no paper *"Attention Is All You Need"*, usando somente a parte **decoder-only**. É uma arquitetura que permite contextos longos graças ao mecanismo de atenção, empilhando múltiplas camadas de blocos de atenção + feed-forward.
 
 A arquitetura **MoE** (Mixture of Experts) só se destaca de fato em escala — com poucos parâmetros e pouco dado, o ganho real dessa arquitetura não aparece, apenas "faíscas" do comportamento esperado.
 
@@ -100,7 +100,7 @@ O tokenizador usado é o **BPE** (Byte Pair Encoding), com vocab size de 10 mil.
 
 ### Loop de treinamento
 
-O loop foi desenvolvido para ser eficiente tanto no carregamento dos dados e na construção do modelo quanto no cálculo do loss e na correção dos pesos (backward + optimizer step). Foram adicionados logs para monitorar o treinamento e checkpoints automáticos, buscando aproveitar melhor o hardware disponível (uso de `torch.compile`, mixed precision, gradient accumulation e scheduler de LR com warmup + cosine decay).
+O loop foi desenvolvido para ser eficiente tanto no carregamento dos dados e na construção do modelo quanto no cálculo do loss e na correção dos pesos (backward + optimizer step). Foram adicionados logs para monitorar o treinamento e checkpoints automáticos, buscando aproveitar melhor o hardware disponível (uso de `torch.compile`, mixed precision, gradient accumulation e scheduler de LR com warmup + cosine decay, etc).
 
 ### Ambiente
 
@@ -117,7 +117,7 @@ O primeiro passo é definir qual dataset será usado para o treinamento — esse
 Clone o repositório na sua máquina:
 
 ```bash
-git clone <url-do-repo>
+git clone https://github.com/marcos-j-ferreira/pre-train.git
 ```
 
 > Se você estiver acessando pelo Colab, também é possível abrir o terminal, clonar o repositório e navegar pelos arquivos de forma parecida com o ambiente local.

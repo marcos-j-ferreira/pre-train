@@ -1,0 +1,48 @@
+dataset:
+  shard_dir: "dataset/shards"
+  shard_pattern: "shard_*.bin"
+  validation_fraction: 0.05
+  seed: 42
+
+# definição do tamanho do modelo
+model:
+  vocab_size: 10001
+  embedding_dim: 128
+  num_heads: 2
+  num_layers: 2
+  block_size: 160
+  dropout: 0.0
+
+# Treino
+treino:
+  max_steps: 1500
+  batch_size: 12
+  grad_accum_steps: 20
+  weight_decay: 0.0001
+  warmup_steps: 10
+  learning_rate: 1e-3
+  min_lr: 1e-5
+  grad_clip: 1.0
+  
+# logs e salvamento 
+  print_interval: 1
+  eval_interval: 500
+  eval_batches: 20
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.0
+
+  checkpoint_interval: 1000
+  checkpoint_dir: "checkpoints"
+  model_save_path: "checkpoints/model_final.pth"
+
+# configurações de hardwares - GPUs
+  use_amp: false
+  use_bfloat16: false
+  torch_compile: false
+  prefetch_factor: 4
+  block_shuffle_size: 256
+
+# interferência durante o treino
+  prompts: "One day" # input
+  infer: True 
+  inter: 50  # tokens gerados
